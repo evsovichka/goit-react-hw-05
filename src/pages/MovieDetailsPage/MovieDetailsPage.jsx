@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { fetchMovieDetails } from "../../services/tmdb-api";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
+import style from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -32,7 +33,9 @@ export default function MovieDetailsPage() {
 
   return (
     <div>
-      <Link to={backLinkRef.current}>Go back</Link>
+      <Link className={style.backlink} to={backLinkRef.current}>
+        Go back
+      </Link>
       {details && <MovieDetails details={details} />}
     </div>
   );

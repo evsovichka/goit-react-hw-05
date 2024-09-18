@@ -1,11 +1,12 @@
 import MovieListItem from "../MovieListItem/MovieListItem";
+import style from "./MovieList.module.css";
 
 export default function MovieList({ movies }) {
   return (
-    <ul>
+    <ul className={style.list}>
       {movies.map((movie) => {
         return (
-          <li key={movie.id}>
+          <li className={style.item} key={movie.id}>
             <MovieListItem movie={movie} />
           </li>
         );

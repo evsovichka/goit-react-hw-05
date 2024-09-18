@@ -2,4 +2,20 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color: rgb(92, 48, 134);
+  background-color: rgb(123, 90, 153);
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+p,
+div,
+ul,
+img,
+b {
+  padding: 0;
+  margin: 0;
 }

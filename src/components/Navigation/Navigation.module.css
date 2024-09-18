@@ -1,0 +1,17 @@
+.nav {
+  font-size: large;
+  font-weight: 600;
+  padding: 15px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  border-radius: 30px;
+  background-color: rgb(238, 219, 255);
+  margin-bottom: 30px;
+}
+
+.activeLink {
+  color: rgb(74, 9, 72);
+  text-decoration: underline;
+}

@@ -5,12 +5,29 @@ import MovieDetailsPage from "../../pages/MovieDetailsPage/MovieDetailsPage";
 import MovieCastList from "../MovieCastList/MovieCastList";
 import MovieReviewsList from "../MovieReviewsList/MovieReviewsList";
 
+import style from "./Navigation.module.css";
+import clsx from "clsx";
+
 export default function Navigation() {
   return (
     <header>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/movies">Movies</NavLink>
+      <nav className={style.nav}>
+        <NavLink
+          className={(props) => {
+            return clsx(style.link, props.isActive && style.activeLink);
+          }}
+          to="/"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={(props) => {
+            return clsx(style.link, props.isActive && style.activeLink);
+          }}
+          to="/movies"
+        >
+          Movies
+        </NavLink>
       </nav>
 
       <Routes>

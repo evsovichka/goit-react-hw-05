@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieActors } from "../../services/tmdb-api";
 import MovieCastItem from "../MovieCastItem/MovieCastItem";
-
+import style from "./MovieCastList.module.css";
 export default function MovieCastList() {
   const { movieId } = useParams();
   const [actors, setActors] = useState([]);
@@ -10,17 +10,16 @@ export default function MovieCastList() {
     const getActors = async () => {
       try {
         const cast = await fetchMovieActors(movieId);
-        console.log(cast);
         setActors(cast);
       } catch (error) {}
     };
     getActors();
   }, [movieId]);
   return (
-    <ul>
+    <ul className={style.list}>
       {actors.map((actor) => {
         return (
-          <li key={actor.id}>
+          <li className={style.item} key={actor.id}>
             <MovieCastItem actor={actor} />
           </li>
         );

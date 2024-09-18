@@ -1,0 +1,11 @@
+.backlink {
+  display: block;
+  padding: 8px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 60px;
+  border: 1px solid rgb(74, 9, 72);
+  border-radius: 30px;
+  background-color: rgb(238, 219, 255);
+  color: rgb(74, 9, 72);
+}

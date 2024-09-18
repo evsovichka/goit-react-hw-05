@@ -1,0 +1,41 @@
+.wraper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.info {
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 850px;
+}
+
+.title {
+  font-size: x-large;
+}
+
+.block {
+  margin-left: 30px;
+  color: beige;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.link {
+  color: beige;
+  font-size: large;
+}
+
+.activeLink {
+  text-decoration: underline;
+}

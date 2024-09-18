@@ -15,7 +15,6 @@ export default function HomePage() {
         setError(false);
         setLoader(true);
         const movies = await fetchPopularMovie();
-        console.log(movies);
         setPopularMovies(movies);
       } catch (error) {
         setError(true);
