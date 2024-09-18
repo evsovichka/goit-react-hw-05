@@ -55,5 +55,5 @@ export const fetchMovieReviews = async (id) => {
       },
     }
   );
-  return reviews.data;
+  return reviews.data.results;
 };

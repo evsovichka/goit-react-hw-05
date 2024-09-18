@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "../../pages/HomePage/HomePage";
 import MovieDetailsPage from "../../pages/MovieDetailsPage/MovieDetailsPage";
 import MovieCastList from "../MovieCastList/MovieCastList";
+import MovieReviewsList from "../MovieReviewsList/MovieReviewsList";
 
 export default function Navigation() {
   return (
@@ -18,7 +19,7 @@ export default function Navigation() {
         <Route path="*" element={<div>Error Page</div>} />
         <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
           <Route path="cast" element={<MovieCastList />} />
-          <Route path="review" element={<div>reviews</div>} />
+          <Route path="reviews" element={<MovieReviewsList />} />
         </Route>
       </Routes>
     </header>
