@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieList from "../../components/MovieList/MovieList";
-import { fetchPopularMovie } from "../../components/services/tmdb-api";
+import { fetchPopularMovie } from "../../services/tmdb-api";
 import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
@@ -15,6 +15,7 @@ export default function HomePage() {
         setError(false);
         setLoader(true);
         const movies = await fetchPopularMovie();
+        console.log(movies);
         setPopularMovies(movies);
       } catch (error) {
         setError(true);
