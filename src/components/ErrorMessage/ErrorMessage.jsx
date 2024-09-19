@@ -1,3 +1,4 @@
+import style from "./ErrorMessage.module.css";
 export default function ErrorMessage() {
   return (
     <b className={style.textError}>

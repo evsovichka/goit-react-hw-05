@@ -57,3 +57,20 @@ export const fetchMovieReviews = async (id) => {
   );
   return reviews.data.results;
 };
+
+export const searchMovie = async (query) => {
+  const movies = await axios.get("https://api.themoviedb.org/3/search/movie", {
+    params: {
+      query: `${query}`,
+      include_adult: "false",
+      language: "en-US",
+      page: "1",
+    },
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYmJmYTU2MTcxYzg5Y2E5MDVjOTExNDgyODE1MzVjYiIsIm5iZiI6MTcyNjY1Mjk5OS4zNTYzMjEsInN1YiI6IjY2ZWFhMTA4NTE2OGE4OTZlMTFmNGZmNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Dbonm7nyfn3XR6syfj_5VjdoilyHR6tz2jkv21_fwl8",
+    },
+  });
+  return movies.data.results;
+};

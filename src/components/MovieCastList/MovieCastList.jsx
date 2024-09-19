@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchMovieActors } from "../../services/tmdb-api";
 import MovieCastItem from "../MovieCastItem/MovieCastItem";
 import style from "./MovieCastList.module.css";
+
 export default function MovieCastList() {
   const { movieId } = useParams();
   const [actors, setActors] = useState([]);

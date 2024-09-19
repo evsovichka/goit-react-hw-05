@@ -1,0 +1,24 @@
+.form {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.input {
+  padding: 8px;
+  border: 1px solid rgb(74, 9, 72);
+  background-color: rgb(238, 219, 255);
+  border-radius: 30px;
+  width: 200px;
+}
+
+.btn {
+  padding: 8px;
+  border: 1px solid rgb(74, 9, 72);
+  background-color: rgb(238, 219, 255);
+  border-radius: 30px;
+  color: rgb(74, 9, 72);
+  width: 65px;
+}

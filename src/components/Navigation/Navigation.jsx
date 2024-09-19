@@ -1,12 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage";
-import MovieDetailsPage from "../../pages/MovieDetailsPage/MovieDetailsPage";
-import MovieCastList from "../MovieCastList/MovieCastList";
-import MovieReviewsList from "../MovieReviewsList/MovieReviewsList";
-
-import style from "./Navigation.module.css";
 import clsx from "clsx";
+import style from "./Navigation.module.css";
 
 export default function Navigation() {
   return (
@@ -29,16 +23,6 @@ export default function Navigation() {
           Movies
         </NavLink>
       </nav>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<div>Movies Page</div>} />
-        <Route path="*" element={<div>Error Page</div>} />
-        <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
-          <Route path="cast" element={<MovieCastList />} />
-          <Route path="reviews" element={<MovieReviewsList />} />
-        </Route>
-      </Routes>
     </header>
   );
 }

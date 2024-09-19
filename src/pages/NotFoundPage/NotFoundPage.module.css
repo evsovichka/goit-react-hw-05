@@ -1,0 +1,22 @@
+.wrap {
+  margin-left: 30px;
+  color: beige;
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.text {
+  font-size: xx-large;
+}
+
+.link {
+  display: block;
+  padding: 8px;
+  width: 120px;
+  border: 1px solid rgb(74, 9, 72);
+  border-radius: 30px;
+  background-color: rgb(238, 219, 255);
+  color: rgb(74, 9, 72);
+}

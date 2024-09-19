@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { fetchMovieDetails } from "../../services/tmdb-api";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
+import Loader from "../../components/Loader/Loader";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import style from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
@@ -20,7 +21,6 @@ export default function MovieDetailsPage() {
         setError(false);
         setLoader(true);
         const info = await fetchMovieDetails(movieId);
-
         setDetails(info);
       } catch (error) {
         setError(true);
@@ -36,6 +36,8 @@ export default function MovieDetailsPage() {
       <Link className={style.backlink} to={backLinkRef.current}>
         Go back
       </Link>
+      {loader && <Loader />}
+      {error && <ErrorMessage />}
       {details && <MovieDetails details={details} />}
     </div>
   );

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews } from "../../services/tmdb-api";
 import MovieReviewsItem from "../MovieReviewsItem/MovieReviewsItem";
+import style from "./MovieReviewsList.module.css";
 
 export default function MovieReviewsList() {
   const { movieId } = useParams();
@@ -19,10 +20,13 @@ export default function MovieReviewsList() {
 
   return (
     <div>
-      <ul>
+      {reviews.length === 0 && (
+        <div>Sorry, we couldn't find any reviews for this movie.</div>
+      )}
+      <ul className={style.list}>
         {reviews.map((review) => {
           return (
-            <li key={review.id}>
+            <li className={style.item} key={review.id}>
               <MovieReviewsItem review={review} />
             </li>
           );
